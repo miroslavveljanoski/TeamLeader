@@ -1,0 +1,298 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  overflow-x: hidden;
+  width: 100%;
+}
+/*PRICING HEADER*/
+.pricing-header {
+  text-align: center;
+  margin: 60px 0 40px 0;
+}
+.pricing-header h1 {
+  font-size: 44px;
+}
+.pricing-header .text-review {
+  font-size: 14px;
+  margin-top: 40px;
+}
+.text-review {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  align-items: center;
+}
+.text-review p {
+  padding: 0 20px;
+}
+.text-review .fa-star {
+  color: #f8b704;
+}
+.text-review #google-logo {
+  height: 40px;
+}
+
+/*STYLING BOXES*/
+.boxes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1024px;
+  margin: auto;
+  margin-bottom: 80px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+.boxes-header {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0 5px 0;
+}
+.boxes-header * {
+  padding: 0 10px;
+}
+.boxes {
+  display: flex;
+}
+.user-number {
+  display: flex;
+  padding: 0;
+  border: 1px solid #c0cdde;
+  position: relative;
+  bottom: 5px;
+}
+.user-number * {
+  padding: 5px;
+}
+.user-number input {
+  border-style: none;
+  width: 30px;
+}
+.user-number button {
+  background-color: #4f1fff;
+  color: white;
+  border-style: none;
+  padding: 5px 15px;
+  font-size: 16px;
+  margin: 0;
+}
+.user-number .counter {
+  width: 130px;
+  margin-left: 5px;
+}
+.user-number .counter span {
+  opacity: 0.6;
+  font-size: 14px;
+}
+.counter input::-webkit-outer-spin-button,
+.counter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.counter input[type='number'] {
+  -moz-appearance: textfield;
+}
+.counter input:focus {
+  border: none;
+  outline: none;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4f1fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+#per-year {
+  opacity: 0.5;
+}
+.box {
+  text-align: center;
+  border-top: 1px solid #c0cdde;
+  border-right: 1px solid #c0cdde;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 33.333%;
+}
+.box:last-child {
+  border-right: none;
+}
+.box p {
+  padding-bottom: 15px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.box h2 {
+  margin-bottom: 10px;
+}
+.box .price {
+  margin-top: auto;
+  font-size: 40px;
+}
+.box .price sup {
+  position: relative;
+  top: 3px;
+  font-size: 25px;
+}
+.box .persons-included {
+  opacity: 0.6;
+  font-size: 14px;
+}
+.box .cta {
+  background-color: #4f1fff;
+  color: white;
+  border-style: none;
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  width: 180px;
+  margin: auto;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+.cta:hover,
+.user-number button:hover,
+.user-number button:hover {
+  background-color: #2800b8;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+/*TEAMLEADER BENEFITS*/
+.teamleader-benefits {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+.teamleader-benefits h2 {
+  width: 40%;
+}
+.benefits {
+  width: 20%;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.benefits a {
+  margin-top: auto;
+  padding-top: 20px;
+  color: #0a95bb;
+}
+.benefits > span {
+  font-size: 60px;
+}
+
+/* RESPONSIVE DESIGN */
+/* Portrait phones and smaller */
+@media (max-width: 576px) {
+  .boxes-container {
+    border: 1px solid #c0cdde;
+    width: 90%;
+    margin-bottom: 0;
+  }
+  .boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .box {
+    width: 100%;
+  }
+  .boxes-header {
+    display: flex;
+    flex-direction: column;
+  }
+  .boxes-header * {
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+  }
+  .user-number .counter {
+    width: 100%;
+  }
+  .user-number {
+    width: 240px;
+    padding: 0;
+  }
+  .switch {
+    width: 48px;
+    height: 24px;
+  }
+  .slider:before {
+    height: 19px;
+    width: 19px;
+    left: 2px;
+    bottom: 3px;
+  }
+  .counter-btn {
+    margin-top: 0;
+  }
+  .teamleader-benefits {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .teamleader-benefits * {
+    flex: 0 1 100%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .teamleader-benefits h2 {
+    text-align: center;
+  }
+  .benefits * {
+    text-align: center;
+    margin: 0;
+  }
+  .benefits a {
+    padding-top: 4px;
+  }
+}
