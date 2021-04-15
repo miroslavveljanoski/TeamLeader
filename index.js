@@ -54,13 +54,13 @@ let counter = 0;
 buttonEl.forEach(function (elem) {
   elem.addEventListener('click', function () {
     counter++;
-    //console.log('clicked');
+    console.log('clicked');
     //Here goes the segment code for tracking clicks
     //In order to check the function, comment on these 3 lines of code
-    // analytics.track('clickedCTA', {
-    //   type: 'button',
-    //   action: 'clicked',
-    // });
+    analytics.track('clickedCTA', {
+      type: 'button',
+      action: 'clicked',
+    });
 
     //I cannot test this because I don't have a Segment account.
     //Link to the documentation https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/
